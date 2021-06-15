@@ -33,7 +33,8 @@ export default {
       height: 0,
       balance: 0,
       unlocked_balance: 0,
-      view_only: false
+      view_only: false,
+      hardware_wallet: false
     },
     secret: {
       mnemonic: "",
