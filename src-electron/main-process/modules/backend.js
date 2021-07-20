@@ -288,7 +288,7 @@ export class Backend {
         if (params.type === "tx") {
           path = "tx";
         } else if (params.type === "service_node") {
-          path = "service_node";
+          path = "sn";
         }
 
         if (path) {
