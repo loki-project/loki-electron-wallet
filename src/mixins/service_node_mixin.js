@@ -22,8 +22,13 @@ export default {
       if (minContributionAtomicUnits === 0 && node.contributors.length < MAX_NUMBER_OF_CONTRIBUTORS) {
         const openContributionRemaining = this.openForContribution(node);
 
+        let contributors_length = 0;
+        for (const contributor of node.contributors) {
+          contributors_length = contributors_length + contributor.locked_contributions.length;
+        }
+
         minContributionAtomicUnits = openContributionRemaining /
-          (MAX_NUMBER_OF_CONTRIBUTORS - node.contributors.length);
+          (MAX_NUMBER_OF_CONTRIBUTORS - contributors_length);
       }
 
       const minContributionOxen = minContributionAtomicUnits / 1e9;
